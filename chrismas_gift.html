@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Gift for Mom and Grandparents</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffebd2, #ff8c94);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 3s ease-in-out;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #b30000;
+            text-shadow: 2px 2px #ffd700;
+            margin-bottom: 20px;
+            animation: glowText 2s infinite alternate;
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .effect-text {
+            color: #ff4500;
+            font-weight: bold;
+            animation: glowing 2s infinite;
+        }
+        @keyframes glowing {
+            0% { text-shadow: 0 0 5px #ff4500, 0 0 10px #ff6347; }
+            50% { text-shadow: 0 0 20px #ff4500, 0 0 30px #ff6347; }
+            100% { text-shadow: 0 0 5px #ff4500, 0 0 10px #ff6347; }
+        }
+        @keyframes glowText {
+            0% { text-shadow: 0 0 10px #ffd700; }
+            100% { text-shadow: 0 0 20px #ff4500; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1.5rem;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            from { transform: translateY(-100px); }
+            to { transform: translateY(100vh); }
+        }
+        .snow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0); }
+            100% { transform: rotate(360deg); }
+        }
+        .star {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3.5rem;
+            color: gold;
+            animation: spin 5s linear infinite;
+        }
+        .translate-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .translate-button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+    <script>
+        function translateToAzerbaijani() {
+            document.getElementById('message').innerHTML = `
+                <h1>Milad bayramınız mübarək, Nənə və Baba!</h1>
+                <p>Siz mənim üçün hər zaman ən dəyərlisiniz.</p>
+                <p>Siz mənə sevgi, gülüş və ən gözəl xatirələri bəxş etmisiniz.</p>
+                <p>Sizi çox sevirəm və Milad bayramınızı təbrik edirəm!</p>
+                <button class="translate-button" onclick="translateToEnglish()">Back to English</button>
+            `;
+        }
+
+        function translateToEnglish() {
+            document.getElementById('message').innerHTML = `
+                <h1>Merry Christmas, Mom!</h1>
+                <p>You are the heart of our family, <span class="effect-text">our guiding star</span>, and the person who makes every moment magical.</p>
+                <p>Thank you for your endless love and kindness. You are the best mom in the world!</p>
+                <p>We love you to the moon and back!</p>
+                <button class="translate-button" onclick="translateToAzerbaijani()">Translate to Azerbaijani</button>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <div class="star">★</div>
+    <div class="container" id="message">
+        <h1>Merry Christmas, Mom!</h1>
+        <p>You are the heart of our family, <span class="effect-text">our guiding star</span>, and the person who makes every moment magical.</p>
+        <p>Thank you for your endless love and kindness. You are the best mom in the world!</p>
+        <p>We love you to the moon and back!</p>
+        <button class="translate-button" onclick="translateToAzerbaijani()">Translate to Azerbaijani</button>
+    </div>
+    <div class="snow">
+        <div class="snowflake" style="left: 10%; animation-duration: 5s;">❄</div>
+        <div class="snowflake" style="left: 30%; animation-duration: 6s;">❄</div>
+        <div class="snowflake" style="left: 50%; animation-duration: 4s;">❄</div>
+        <div class="snowflake" style="left: 70%; animation-duration: 7s;">❄</div>
+        <div class="snowflake" style="left: 90%; animation-duration: 5s;">❄</div>
+    </div>
+</body>
+</html>
